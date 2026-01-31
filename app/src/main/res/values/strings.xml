@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Music App</string>
+    <string name="strNameTxt">Name: Nhlanhla Cindi</string>
+    <string name="strStudentNrTxt">Student nr.: ST10470261</string>
+    <string name="btnStart">Start</string>
+    <string name="btnExit">Exit</string>
+    <string name="strSongInfoTxt">Song Info:</string>
+    <string name="strSongName">Song:</string>
+    <string name="strArtistName">Artist:</string>
+    <string name="lblRating">Rating (1-5):</string>
+
+    <string-array name="comment">
+        <item>HipHop</item>
+        <item>Rock</item>
+        <item>Pop</item>
+        <item>Classical</item>
+        <item>Jazz</item>
+        <item>Kpop</item>
+        <item>Blues</item>
+        <item>Soul</item>
+        <item>Afrobeats</item>
+        <item>Electronic</item>
+        <item>RnB</item>
+        <item>Amapiano</item>
+        <item>Techno</item>
+    </string-array>
+
+    <string-array name="ratings">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
 </resources>

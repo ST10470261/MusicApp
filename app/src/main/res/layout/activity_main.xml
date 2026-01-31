@@ -9,12 +9,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/strSongInfo"
+        android:id="@+id/strSongInfoTxt"
         android:layout_width="315dp"
         android:layout_height="66dp"
         android:layout_marginBottom="5dp"
-        android:text="New Game Session Entry"
-        android:textSize="24sp"
+        android:text="Song Info:"
+        android:textSize="39sp"
         android:textStyle="bold"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,11 +25,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/lblDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/strSongName"
+        android:layout_width="57dp"
+        android:layout_height="25dp"
         android:layout_marginTop="24dp"
-        android:text="Date:"
+        android:text="Song:"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,29 +39,29 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <EditText
-        android:id="@+id/etDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:id="@+id/strSongNameTxt"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
         android:autofillHints="false"
         android:clickable="true"
         android:focusable="false"
-        android:hint="YYYY-MM-DD"
-        android:inputType="date"
+        android:hint="(Title of the song)"
+        android:inputType="text"
         android:longClickable="false"
         android:minHeight="48dp"
+        android:entries="@array/songName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lblDate"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <TextView
-        android:id="@+id/lblMinutesPlayed"
+        android:id="@+id/strArtistNameTxt"
         android:layout_width="69dp"
         android:layout_height="23dp"
-        android:text="Minutes Played:"
+        android:text="Artist:"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,17 +69,18 @@
         app:layout_constraintVertical_bias="0.279" />
 
     <EditText
-        android:id="@+id/etMinutesPlayed"
+        android:id="@+id/strArtistName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:hint="e.g., 60"
-        android:inputType="number"
+        android:hint="(Name of the artist)"
+        android:inputType="text"
         android:minHeight="48dp"
+        android:entries="@array/artistName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lblMinutesPlayed"
+        app:layout_constraintStart_toEndOf="@+id/strArtistNameTxt"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.29" />
 
@@ -87,13 +88,25 @@
         android:id="@+id/lblRating"
         android:layout_width="98dp"
         android:layout_height="33dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:text="Rating (1-5):"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.572" />
+
+    <TextView
+        android:id="@+id/lblComment"
+        android:layout_width="98dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:text="Description:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.427" />
 
     <Spinner
         android:id="@+id/spinnerRating"
@@ -104,9 +117,24 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/lblRating"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <Spinner
+        android:id="@+id/spinnerDescription"
+        android:layout_width="265dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/description"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/lblRating"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
 
     <Button
         android:id="@+id/btnAddEntry"
@@ -119,7 +147,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnClearInputs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.737" />
 
     <Button
         android:id="@+id/btnClearInputs"
@@ -132,18 +160,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnAddEntry"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.737" />
 
     <Button
-        android:id="@+id/btnGoToDetails"
+        android:id="@+id/btnViewDetails"
         android:layout_width="169dp"
         android:layout_height="63dp"
-        android:layout_marginTop="44dp"
         android:backgroundTint="@color/black"
-        android:text="Go to Details"
+        android:text="View Details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddEntry" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

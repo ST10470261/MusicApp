@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="songName" />
+    <string-array name="artistName" />
+    <string-array name="description" />
+
+<string-array name="descriptions_array">
+    <item>Rock</item>
+    <item>Pop</item>
+    <item>Jazz</item>
+    <item>Classical</item>
+    <item>Electronic</item>
+    <item>Hip Hop</item>
+    <item>Other</item>
+</string-array>
+
+<string-array name="ratings_array">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+</string-array>
+</resources>

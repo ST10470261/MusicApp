@@ -8,4 +8,70 @@
     android:layout_height="match_parent"
     tools:context=".DetailView">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <TextView
+      android:id="@+id/strPlaylistDetailsTxt"
+      android:layout_width="306dp"
+      android:layout_height="82dp"
+      android:text="Playlist Details:"
+      android:textAlignment="center"
+      android:textSize="35sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.049" />
+
+  <ListView
+      android:id="@+id/lvSongEntries"
+      android:layout_width="392dp"
+      android:layout_height="249dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.236" />
+
+  <TextView
+      android:id="@+id/tvHighestRatedSong"
+      android:layout_width="355dp"
+      android:layout_height="82dp"
+      android:text="Highest-rated song: N/A"
+      android:textAlignment="center"
+      android:textSize="30sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.306"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.607" />
+
+  <Button
+      android:id="@+id/btnBackToMain"
+      android:layout_width="288dp"
+      android:layout_height="65dp"
+      android:text="Back to Main Screen"
+      android:backgroundTint="@color/black"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.759" />
+
+  <Button
+      android:id="@+id/btnExitApp"
+      android:layout_width="288dp"
+      android:layout_height="65dp"
+      android:text="Exit App"
+      android:backgroundTint="@color/black"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.89" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
